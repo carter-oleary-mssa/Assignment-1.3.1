@@ -1,11 +1,26 @@
-﻿double CalculateTriangleArea(double b, double h)
+﻿double CalculateTriangleArea()
 {
-    return .5 * b * h;
+    Console.Write("Please enter a base length: ");
+    double baseLength = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Please enter a height: ");
+    double height = Convert.ToDouble(Console.ReadLine());
+    return .5 * baseLength * height;
 }
 
-double CalculateRectangleArea(double length, double width)
+double CalculateRectangleArea()
 {
+    Console.Write("Please enter a length: ");
+    double length = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Please enter a width: ");
+    double width = Convert.ToDouble(Console.ReadLine());
     return length * width;
+}
+
+double CalculateSquareArea()
+{
+    Console.Write("Please enter a side length: ");
+    double sideLength = Convert.ToDouble(Console.ReadLine());
+    return sideLength * sideLength;
 }
 
 // Prints the selection menu
@@ -26,25 +41,15 @@ while(true)
     switch (Console.ReadLine().ToLower())
     {
         case "t":
-            Console.Write("Please enter a base length: ");
-            double baseLength = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Please enter a height: ");
-            double height = Convert.ToDouble(Console.ReadLine());
-            area = CalculateTriangleArea(baseLength, height);
+            area = CalculateTriangleArea();
             break;
 
         case "r":
-            Console.Write("Please enter a length: ");
-            double length = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Please enter a width: ");
-            double width = Convert.ToDouble(Console.ReadLine());
-            area = CalculateRectangleArea(length, width);
+            area = CalculateRectangleArea();
             break;
 
         case "s":
-            Console.Write("Please enter a side length: ");
-            double sideLength = Convert.ToDouble(Console.ReadLine());
-            area = CalculateRectangleArea(sideLength, sideLength);
+            area = CalculateSquareArea();
             break;
         // Checks for invalid input and goes back to beginning of loop
         default:
@@ -57,4 +62,5 @@ while(true)
     {
         break;
     }
+    Console.WriteLine();
 } 
