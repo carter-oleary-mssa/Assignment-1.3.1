@@ -12,9 +12,9 @@ double CalculateRectangleArea(double length, double width)
 static void PrintMenu()
 {
     Console.WriteLine("Please choose an option:");
-    Console.WriteLine("t: Calculate triangle area");
-    Console.WriteLine("r: Calculate rectangle area");
-    Console.WriteLine("s: Calculate square area");
+    Console.WriteLine("\tt: Calculate triangle area");
+    Console.WriteLine("\tr: Calculate rectangle area");
+    Console.WriteLine("\ts: Calculate square area");
 }
 
 // Initialize area variable
